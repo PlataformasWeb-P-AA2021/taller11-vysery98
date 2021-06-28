@@ -33,6 +33,8 @@
         {% endfor %}
       </ul>
         <span><b>Total:</b> {{ e.obtener_costo_telefonos }}</span>
+        <br>
+        <span><b>Total de números:</b> {{ e.obtener_cantidad_telefonos }}</span>
         <br>[<a href="{% url 'crear_numero_telefonico_estudiante' e.id%}">+Teléfono</a>]
     </td>
     <td> <a href="{% url 'obtener_estudiante' e.id %}">ver</a> <br>

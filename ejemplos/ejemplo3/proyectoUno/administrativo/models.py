@@ -16,7 +16,17 @@ class Estudiante(models.Model):
 
     def obtener_costo_telefonos(self):
         valor = [t.costo_plan for t in self.numeros_telefonicos.all()]
-        valor = sum(valor)
+        valor = sum(valor) # sum(valor) -> [10.2, 20] = 30.2
+        #valor = 0;
+        #for t in self.num_telefonicos.all(): # self.num_telefonicos -> me devuelve un listado de obj de tipo NumeroTelefonico
+        #    valor = valor + t.costo_plan
+
+        return valor
+
+    def obtener_cantidad_telefonos(self):
+        """
+        """
+        valor = len(self.numeros_telefonicos.all())
         return valor
 
 class NumeroTelefonico(models.Model):

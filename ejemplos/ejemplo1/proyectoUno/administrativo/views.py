@@ -58,7 +58,7 @@ def crear_estudiante(request):
         formulario = EstudianteForm()
     diccionario = {'formulario': formulario}
 
-    return render(request, 'crearEstudiante_3.html', diccionario)
+    return render(request, 'crearEstudiante_2.html', diccionario)
 
 
 def editar_estudiante(request, id):
